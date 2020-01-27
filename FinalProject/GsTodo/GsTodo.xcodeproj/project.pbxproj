@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		67093E3F23DF1399008F7549 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67093E3E23DF1399008F7549 /* GoogleService-Info.plist */; };
+		67093E4223DF1419008F7549 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67093E4023DF1419008F7549 /* LoginViewController.swift */; };
+		67093E4323DF1419008F7549 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67093E4123DF1419008F7549 /* LoginViewController.xib */; };
 		67166CA223D0419F008EF0CA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67166CA023D0419F008EF0CA /* CustomCell.swift */; };
 		67166CA323D0419F008EF0CA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67166CA123D0419F008EF0CA /* CustomCell.xib */; };
 		67E03F9723CEC75400B8220F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E03F9623CEC75400B8220F /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		5AAC0FEE29D3E70D6F84B27B /* Pods-GsTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GsTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GsTodo/Pods-GsTodo.debug.xcconfig"; sourceTree = "<group>"; };
 		67093E3E23DF1399008F7549 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		67093E4023DF1419008F7549 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		67093E4123DF1419008F7549 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		67166CA023D0419F008EF0CA /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		67166CA123D0419F008EF0CA /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		67E03F9323CEC75400B8220F /* GsTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GsTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +67,15 @@
 				CBD66412238EBD6BC1DDF237 /* Pods-GsTodo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		67093E4423DF141E008F7549 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				67093E4023DF1419008F7549 /* LoginViewController.swift */,
+				67093E4123DF1419008F7549 /* LoginViewController.xib */,
+			);
+			path = LoginPage;
 			sourceTree = "<group>";
 		};
 		675B63BD23CF040F00F9A5AC /* TaskListPage */ = {
@@ -121,6 +134,7 @@
 				678EAB9023CF034E00FE4177 /* Models */,
 				675B63BD23CF040F00F9A5AC /* TaskListPage */,
 				675B63BF23CF042700F9A5AC /* AddPage */,
+				67093E4423DF141E008F7549 /* LoginPage */,
 				67E03F9F23CEC75700B8220F /* Assets.xcassets */,
 				67E03FA123CEC75700B8220F /* LaunchScreen.storyboard */,
 				67E03FA423CEC75700B8220F /* Info.plist */,
@@ -201,6 +215,7 @@
 				67E03FA023CEC75700B8220F /* Assets.xcassets in Resources */,
 				67E03FAD23CEC8DD00B8220F /* AddViewController.xib in Resources */,
 				67E03F9E23CEC75400B8220F /* Main.storyboard in Resources */,
+				67093E4323DF1419008F7549 /* LoginViewController.xib in Resources */,
 				67093E3F23DF1399008F7549 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +273,7 @@
 				67E03F9723CEC75400B8220F /* AppDelegate.swift in Sources */,
 				67E03FB423CEFB8100B8220F /* TaskCollection.swift in Sources */,
 				67E03FB223CEFB6B00B8220F /* Task.swift in Sources */,
+				67093E4223DF1419008F7549 /* LoginViewController.swift in Sources */,
 				67E03FAC23CEC8DD00B8220F /* AddViewController.swift in Sources */,
 				67166CA223D0419F008EF0CA /* CustomCell.swift in Sources */,
 				67E03F9923CEC75400B8220F /* SceneDelegate.swift in Sources */,
