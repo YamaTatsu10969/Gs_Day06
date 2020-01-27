@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67093E3F23DF1399008F7549 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67093E3E23DF1399008F7549 /* GoogleService-Info.plist */; };
 		67166CA223D0419F008EF0CA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67166CA023D0419F008EF0CA /* CustomCell.swift */; };
 		67166CA323D0419F008EF0CA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67166CA123D0419F008EF0CA /* CustomCell.xib */; };
 		67E03F9723CEC75400B8220F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E03F9623CEC75400B8220F /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5AAC0FEE29D3E70D6F84B27B /* Pods-GsTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GsTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GsTodo/Pods-GsTodo.debug.xcconfig"; sourceTree = "<group>"; };
+		67093E3E23DF1399008F7549 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67166CA023D0419F008EF0CA /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		67166CA123D0419F008EF0CA /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		67E03F9323CEC75400B8220F /* GsTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GsTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 		67E03F9523CEC75400B8220F /* GsTodo */ = {
 			isa = PBXGroup;
 			children = (
+				67093E3E23DF1399008F7549 /* GoogleService-Info.plist */,
 				67E03F9623CEC75400B8220F /* AppDelegate.swift */,
 				67E03F9823CEC75400B8220F /* SceneDelegate.swift */,
 				678EAB9023CF034E00FE4177 /* Models */,
@@ -198,6 +201,7 @@
 				67E03FA023CEC75700B8220F /* Assets.xcassets in Resources */,
 				67E03FAD23CEC8DD00B8220F /* AddViewController.xib in Resources */,
 				67E03F9E23CEC75400B8220F /* Main.storyboard in Resources */,
+				67093E3F23DF1399008F7549 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
