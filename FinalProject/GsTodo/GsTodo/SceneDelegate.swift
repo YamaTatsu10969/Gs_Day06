@@ -14,8 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        #warning("ここに次の記事のコードを記述する。http://bit.ly/2uwW1nz")
+        #warning("ここに次の記事のコードを記述する。 参考：http://bit.ly/2uwW1nz")
         window = UIWindow(windowScene: scene)
+        // ここで指定する  ViewController が最初に起動する ViewController になる
         window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
     }

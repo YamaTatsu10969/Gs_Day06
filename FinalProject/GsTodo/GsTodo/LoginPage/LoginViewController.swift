@@ -18,9 +18,32 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tapSignUpButton(_ sender: Any) {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            return
+        }
+        if email.isEmpty {
+            showOKAlert(text: "メールアドレスを入力してください🙇‍♀️")
+            return
+        }
+        if password.isEmpty {
+            showOKAlert(text: "パスワードを入力してください🙇‍♂️")
+            return
+        }
+        
     }
     
     @IBAction func tapLogInButton(_ sender: Any) {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            return
+        }
+        if email.isEmpty {
+            showOKAlert(text: "メールアドレスを入力してください🙇‍♀️")
+            return
+        }
+        if password.isEmpty {
+            showOKAlert(text: "パスワードを入力してください🙇‍♂️")
+            return
+        }
     }
     
     @IBAction func tapTermsButton(_ sender: Any) {

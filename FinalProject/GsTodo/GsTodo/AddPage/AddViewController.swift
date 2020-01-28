@@ -76,14 +76,9 @@ class AddViewController: UIViewController {
         // 前の画面に戻る
         navigationController?.popViewController(animated: true)
     }
-    
-    // アラートを表示するメソッド
-    func showAlert(_ text: String){
-        let alertController = UIAlertController(title: "エラー", message: text , preferredStyle: UIAlertController.Style.alert)
-        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
-    }
+        
+    #warning("他のViewController でも使えるように、UIViewController の Extension にする")
+
     
 }
 
