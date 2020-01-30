@@ -7,5 +7,6 @@ target 'GsTodo' do
 
   # Pods for GsTodo
   pod 'PKHUD'
-
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
 end
