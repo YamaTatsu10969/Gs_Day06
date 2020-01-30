@@ -45,11 +45,12 @@ class LoginViewController: UIViewController {
             showErrorAlert(text: "パスワードを入力してください🙇‍♂️")
             return
         }
-        emailSignUp(email: email, password: password)
+        emailLogIn(email: email, password: password)
     }
     
     @IBAction func tapTermsButton(_ sender: Any) {
-        presentTaskListPage()
+        let vc = TermsViewController()
+        present(vc, animated: true)
     }
     
     func emailSignUp(email: String, password: String) {
@@ -112,15 +113,15 @@ class LoginViewController: UIViewController {
     }
     
     func presentTaskListPage() {
-        // xib で作るよりも長くなる.
+        // xib で作るよりも長くなる...
         // 開発現場では 1Storyboard1VC が基本
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateInitialViewController() else {
             print("viewController がないよ。。。")
             return
         }
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        present(vc, animated: true)
     }
     
 }

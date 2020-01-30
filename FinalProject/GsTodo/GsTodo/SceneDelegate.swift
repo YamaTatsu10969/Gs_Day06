@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,9 +17,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         #warning("ここに次の記事のコードを記述する。 参考：http://bit.ly/2uwW1nz")
         window = UIWindow(windowScene: scene)
-        // ここで指定する  ViewController が最初に起動する ViewController になる
-        window?.rootViewController = LoginViewController()
+        if let _ = Auth.auth().currentUser {
+            // ここで指定する  ViewController が最初に起動する ViewController になる
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else {
+                print("viewController がないよ。。。")
+                return
+            }
+            window?.rootViewController = vc
+        } else {
+            window?.rootViewController = LoginViewController()
+        }
         window?.makeKeyAndVisible()
+        
+//        window = UIWindow(windowScene: scene)
+//        // ここで指定する  ViewController が最初に起動する ViewController になる
+//        window?.rootViewController = LoginViewController()
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
