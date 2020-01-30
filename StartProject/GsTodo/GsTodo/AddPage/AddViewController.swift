@@ -57,7 +57,7 @@ class AddViewController: UIViewController {
             print(title, "👿titleが空っぽだぞ〜")
             
             HUD.flash(.labeledError(title: nil, subtitle: "👿 タイトルが入力されていません！！！"), delay: 1)
-            // showAlert("👿 タイトルが入力されていません！！！")
+            // showErrorAlert(text:"👿 タイトルが入力されていません！！！")
             return // return を実行すると、このメソッドの処理がここで終了する。
         }
         
@@ -78,7 +78,13 @@ class AddViewController: UIViewController {
     }
         
     #warning("他のViewController でも使えるように、UIViewController の Extension にする")
-
+    // OKを選択させるエラーアラートを表示する
+    func showErrorAlert(text: String){
+        let alertController = UIAlertController(title: "エラー", message: text , preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
     
 }
 

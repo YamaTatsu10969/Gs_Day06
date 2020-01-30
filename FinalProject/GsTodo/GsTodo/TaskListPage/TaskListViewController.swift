@@ -80,6 +80,9 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     
     // セルをタップした時の処理
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        #warning("タップした後に色がつくのを消す処理を追加")
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let vc = AddViewController()
         vc.selectIndex = indexPath.row
         navigationController?.pushViewController(vc, animated: true)

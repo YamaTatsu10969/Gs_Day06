@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class TaskListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -41,8 +40,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         navigationItem.rightBarButtonItem = rightButtonItem
         
         #warning("leftButton を作成して、 logout を実行する")
-        let leftButtonItem = UIBarButtonItem(title: "logout", style: .plain, target: self, action: #selector(logout))
-        navigationItem.leftBarButtonItem = leftButtonItem
+
     }
     
     @objc func showAddScreen() {
@@ -50,19 +48,9 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc func logout() {
-        do {
-            try Auth.auth().signOut()
-            // 強制的に現在の表示している vc を変更する
-            let vc = LoginViewController()
-            let sceneDelegate = view.window?.windowScene?.delegate as! SceneDelegate
-            sceneDelegate.window?.rootViewController = vc
-        } catch {
-            print("error:",error.localizedDescription)
-        }
-        // [swift - UIApplication.shared.delegate equivalent for SceneDelegate xcode11? - Stack Overflow](https://stackoverflow.com/questions/56588843/uiapplication-shared-delegate-equivalent-for-scenedelegate-xcode11)
-        // [iOS13のSceneDelegate周りのアプリの起動シーケンス - Qiita](https://qiita.com/omochimetaru/items/31df103ef98a9d84ae6b)
-    }
+    #warning("logout の処理")
+
+    
     
     // MARK: UITableView
     
@@ -80,6 +68,8 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     
     // セルをタップした時の処理
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        #warning("タップした後に色がつくのを消す処理を追加")
+        
         let vc = AddViewController()
         vc.selectIndex = indexPath.row
         navigationController?.pushViewController(vc, animated: true)
