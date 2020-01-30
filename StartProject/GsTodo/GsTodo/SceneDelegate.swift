@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         #warning("ここに次の記事のコードを記述する。 参考：http://bit.ly/2uwW1nz")
+        #warning("Info.plist の中の Scene に関するところの main.storyboard も消しておく")
         
         #warning("後で、Authのユーザーがいるかどうかで最初の画面を変更する")
     }
